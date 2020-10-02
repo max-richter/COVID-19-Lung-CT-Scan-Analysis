@@ -1,37 +1,21 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/max-richter/COVID-19-Lung-X-Ray-Analysis/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Background
+Controlling the coronavirus is undoubtedly one of the biggest global challenges scientists are immediately facing. There are currently over seven million confirmed cases in the United States, but the number of actual cases could be much higher due to lack of testing and false diagnoses. Some of the primary symptoms of Covid-19 include coughing and shortness of breath, which are both issues with the lungs. Chest x-rays have been successful in helping diagnose those infected, but it may take 1-2 days for patients to receive their results. With the number of cases still rising, it is crucial that we find a way to conduct a quicker, more accurate form of testing for the virus. More exact numbers would be extremely helpful in assisting us to understand the true severity of the situation, and how to combat the spread.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Idea
 
-### Markdown
+The goal of this project is to help increase the speed that x-ray images are analyzed while maintaining the diagnosis accuracy. Normally, a radiologist will compare two x-rays and make a diagnosis, but this process is one that scientists believe can be automated for better speed and accuracy. This can be done by processing images of lungs in healthy people vs those with the infection. A neural network needs to be constructed and will contain a trained model based on various lung images. Doctors will then be able to upload x-rays of their patient into this program and be given a diagnosis based on the predicted results.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Current State
 
-```markdown
-Syntax highlighted code block
+Incorporating AI into radiology is an area with a huge potential for growth. There are already numerous examples of image processing to conduct analysis on x-rays dealing with broken bones, respiratory illnesses, and other medical emergencies. As of October 2019, the FDA has approved 28 algorithms for image processing, but most of them are unique to individual facilities and are trained with small datasets. The Radiological Society of North America has created their own detection neural network for Covid-19 using lung images. Using data from six hospitals consisting of 4,536 x-ray images, they have designed a model that takes into account CT scans, symptoms, patient age, and sex. **The design of this program will rely solely on image data and will expand the population of training images while being portable enough so that it can be widely utilized among healthcare professionals.**
 
-# Header 1
-## Header 2
-### Header 3
+### Development Steps and Timeline
 
-- Bulleted
-- List
+ 1. ***Data Collection and Cleaning: October 1st - October 17th***
+    To create this, a convolutional neural network will need to be built using Keras and Tensorflow to analyze and classify the patient x-ray. The model will be trained with a dataset containing images of lungs that are healthy, lungs from Covid-19 positive subjects, and lungs from other respiratory illnesses. Lung images of other respiratory illnesses need to be added in order to create a more accurate model. Without them, people who have miscellaneous lung problems would be falsely diagnosed with Coronavirus. Conveniently, researchers at the National Institute of Health have created a publicly accessible chest x-ray database that contains over 100,000 images from more than 30,000 patients. The images have 14 labels associated with them, such as “No Finding”, “Pneumonia”, “Cardiomegaly”, “Edema”, etc. In addition to these illnesses, we need to add a label and image set for Covid-19, which will give us 15 labels. For this set we will be using the train images from confirmed Coronavirus CT scans. In order to confirm that the data collection was successful, we should make sure we can visualize each image and the corresponding label.
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/max-richter/COVID-19-Lung-X-Ray-Analysis/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+2.  ***Building the model: October 18th-November 1st***
+    After we have collected the data, we can build the CNN model. It will be a sequential model optimized for this dataset using a Convolutional 2D layer, a Flatten layer, and a Dense layer with 15 total nodes. The dense layer will have softmax activation since this is a multi-classification model that will output a probability distribution. After compilation, we can train the model with the images and labels that we collected earlier. For the purpose of this program, the test image will be a single image from the second database, which has testing data for both positive and negative Covid-19 lungs. Using a single image from this set simulates how a doctor would use this tool to examine a lung x-ray for one patient.
+3. ***Analyze and Display Results: November 1st-November 18th***
+    The last step is evaluating our model to find the probability of each lung condition and predict the label in order to make a diagnosis based on the highest probability. To visualize the results, the test image should be printed next to the closest training image for comparison, along with what percent of a match it was (ex: 94.6% match).
