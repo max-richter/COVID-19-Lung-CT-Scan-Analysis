@@ -1,3 +1,5 @@
+[Presentation Slides](https://docs.google.com/presentation/d/1nr-n63nrJ9jsreuh-RTk1XlCcX8rok-jeBqi4GhL3zY/edit?usp=sharing)
+[Presentation Video](https://drive.google.com/file/d/1iFuPBp_VFopdzyHgY0gxxrm1S4wjgs4a/view?usp=sharing)
 
 ## Background
 Controlling the coronavirus is undoubtedly one of the biggest global challenges scientists are immediately facing. There are currently over seven million confirmed cases in the United States, but the number of actual cases could be much higher due to lack of testing and false diagnoses. Some of the primary symptoms of Covid-19 include coughing and shortness of breath, which are both issues with the lungs. Chest CT scans have been successful in helping diagnose those infected, but it may take 1-2 days for patients to receive their results. With the number of cases still rising, it is crucial that we find a way to conduct a quicker, more accurate form of testing for the virus. More exact numbers would be extremely helpful in assisting us to understand the true severity of the situation, and how to combat the spread.
