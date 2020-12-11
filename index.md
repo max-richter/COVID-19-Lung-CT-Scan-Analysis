@@ -4,7 +4,7 @@ Controlling the coronavirus is undoubtedly one of the biggest global challenges 
 
 ### Idea
 
-The goal of this project is to help increase the speed that CT scans are analyzed while maintaining the diagnosis accuracy. Normally, a radiologist will compare two CT scans and make a diagnosis, but this process is one that scientists believe can be automated for better speed and accuracy. This can be done by processing images of lungs in healthy people vs those with the infection. A neural network needs to be constructed and will contain a trained model based on various lung images. Doctors will then be able to upload CT scans of their patient into this program and be given a diagnosis based on the predicted results.
+Given a chest CT scan, the goal of this project is to make a prediction if the patient has COVID-19 based on a convolutional neural network. Normally, a radiologist will compare two CT scans and make a diagnosis, but this process is one that scientists believe can be automated for better speed and accuracy. This can be done by processing images of lungs in healthy people vs those with the infection. A neural network needs to be constructed and will contain a trained model based on various lung images. Doctors will then be able to upload CT scans of their patient into this program and be given a diagnosis based on the predicted results.
 
 ### Current State
 
