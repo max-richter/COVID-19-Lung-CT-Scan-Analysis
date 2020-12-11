@@ -20,7 +20,7 @@ Incorporating AI into radiology is an area with a huge potential for growth. The
 3. ***Analyze and Display Results: November 1st-November 18th***
     The last step is evaluating our model to find the probability of each lung condition and predict the label in order to make a diagnosis based on the highest probability. To visualize the results, the test image should be printed next to the closest training image for comparison, along with what percent of a match it was (ex: 94.6% match).
 
-## Technical Approach
+## Technical Approach & Implementation
 
  - Data Collection
 	 - First, we gathered chest CT scans from open source databases.
