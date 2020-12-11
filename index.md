@@ -33,12 +33,15 @@ Incorporating AI into radiology is an area with a huge potential for growth. The
 	 - Images are preprocessed to make them the same shape.
 	 - Next, they are grouped into training/test images.
 	 - A label array gives each image a corresponding label to identify which illness group it belongs to.
+	 
 	 ![Preprocessing phase](https://i.imgur.com/4h25i3J.png)
 
  - Building and Training the model
 	 - Creating and building the model produces an untrained neural network (CNN in our case).
 	 - Training the model uses the images and labels to "train" the data.
+
 ![Build and Train model](https://i.imgur.com/7Q3lWM9.png)
+
 ![basic neural network architecture](https://i.imgur.com/60TC6W4.png)
   
 *Example of a basic neural network architecture*
