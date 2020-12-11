@@ -33,30 +33,30 @@ Incorporating AI into radiology is an area with a huge potential for growth. The
 	 - Images are preprocessed to make them the same shape.
 	 - Next, they are grouped into training/test images.
 	 - A label array gives each image a corresponding label to identify which illness group it belongs to.
-	 
-![Preprocessing phase](https://i.imgur.com/4h25i3J.png)
+	 ![Preprocessing phase](https://i.imgur.com/4h25i3J.png)
 
  - Building and Training the model
 	 - Creating and building the model produces an untrained neural network (CNN in our case).
 	 - Training the model uses the images and labels to "train" the data.
-
 ![Build and Train model](https://i.imgur.com/7Q3lWM9.png)
-
-![basic neural network architecture](https://i.imgur.com/60TC6W4.png)
-
-*Example of a basic neural network architecture*
+ ![basic neural network architecture](https://i.imgur.com/60TC6W4.png)
+  *Example of a basic neural network architecture*
  - Predict Results
 	 - Using the trained model, we estimate the three most likely diagnoses along with their respective probabilities (e.g. COVID-19: 67%, Pneumonia: 14%, Adenocarcinoma: 9%, etc).
-	 
-  
-  ![Predict Results](https://i.imgur.com/bmCkDdO.png)
+	 ![Predict Results](https://i.imgur.com/bmCkDdO.png)
 
 ## Results
+
+### Problems Encountered
+Near the end of our project, we started to think about what kind of difficulties we ran into. The biggest roadblock we ran into was finding usable CT scans. We needed images that were certain formats (jpg, png, etc) but most of the datasets we discovered were of the DICOM standard. This is understandable as it's the standard format for medical imaging, but after further exploration we found that working with this format wasn't acceptable for our implementation (a single CT scan in DICOM format can be comprised of hundreds of various images).
+
+Another interesting discovery we made is that many CT scans look similar to each other even though they present different respiratory illnesses. For example, a patient with COVID might have a CT scan that looks similar to a healthy patient and vice versa. In regard to training our model, this affected our results as each CT scan is patient dependent and lack critical context that would otherwise be needed to make a diagnosis (e.g. many patients develop pneumonia from COVID and it's near impossible to incorporate this contextual info into our model). Given our datasets for some respiratory illnesses were very small, we strongly believe our model would perform better given a much larger dataset.
 
 ## Project Materials
 
  - [Presentation Slides](https://docs.google.com/presentation/d/1nr-n63nrJ9jsreuh-RTk1XlCcX8rok-jeBqi4GhL3zY/edit?usp=sharing)
  - [Presentation Video](https://drive.google.com/file/d/1iFuPBp_VFopdzyHgY0gxxrm1S4wjgs4a/view?usp=sharing)
+ - [Source Code on Github](https://github.com/sgronseth/CovidLungAnalysis)
 
 
 ### Sources
