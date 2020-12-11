@@ -75,7 +75,7 @@ Another interesting discovery we made is that many CT scans look similar to each
 
  - [Presentation Slides](https://docs.google.com/presentation/d/1nr-n63nrJ9jsreuh-RTk1XlCcX8rok-jeBqi4GhL3zY/edit?usp=sharing)
  - [Presentation Video](https://drive.google.com/file/d/1iFuPBp_VFopdzyHgY0gxxrm1S4wjgs4a/view?usp=sharing)
- - [Source Code on Github](https://github.com/sgronseth/CovidLungAnalysis)
+ - [Source Code on GitHub](https://github.com/sgronseth/CovidLungAnalysis)
 
 ### Tech Stack
  - Python
