@@ -1,3 +1,4 @@
+
 ## Background
 Controlling the coronavirus is undoubtedly one of the biggest global challenges scientists are immediately facing. There are currently over seven million confirmed cases in the United States, but the number of actual cases could be much higher due to lack of testing and false diagnoses. Some of the primary symptoms of Covid-19 include coughing and shortness of breath, which are both issues with the lungs. Chest CT scans have been successful in helping diagnose those infected, but it may take 1-2 days for patients to receive their results. With the number of cases still rising, it is crucial that we find a way to conduct a quicker, more accurate form of testing for the virus. More exact numbers would be extremely helpful in assisting us to understand the true severity of the situation, and how to combat the spread.
 
@@ -51,6 +52,19 @@ Incorporating AI into radiology is an area with a huge potential for growth. The
 ![Predict Results](https://i.imgur.com/bmCkDdO.png)
 
 ## Results
+Below are some of the outputs of our program after inputting a CT scan.
+
+![Result 1](https://i.imgur.com/PvdOZ6U.png)
+
+![Result 2](https://i.imgur.com/Rgm0L6J.png)
+
+![Result 3](https://i.imgur.com/ol9RDMx.png)
+
+![Result 4](https://i.imgur.com/EG8J30U.png)
+
+![Result 5](https://i.imgur.com/YhVFiBw.png)
+
+After analyzing our results, we derived that our model did a good job at predicting positive COVID-19 CT scans. One thing we noticed was both Large Cell Carcinoma and Adenocarcinoma having a very low percentage on nearly every run. We believe this is due to the size of each data set. In regard to finding good examples of CT scans for each respiratory illness, we found a plethora of examples for patients with COVID-19 or those with healthy lungs. Unfortunately, data sets of Adenocarcinoma and Large Cell Carcinoma were smaller by a factor of two. Most of these data sets were in DICOM format and very cumbersome to deal with (i.e. 100GB+ data set size, pre-labeled CT scans with alterations to the image, etc). Also, some CT scans with different respiratory illnesses look nearly identical, and we will explain this phenomenon in more detail below. Overall, we think our model would perform much more accurately if we were able to increase each data set size by a factor of two or three.
 
 ### Problems Encountered
 Near the end of our project, we started to think about what kind of difficulties we ran into. The biggest roadblock we ran into was finding usable CT scans. We needed images that were certain formats (jpg, png, etc) but most of the datasets we discovered were of the DICOM standard. This is understandable as it's the standard format for medical imaging, but after further exploration we found that working with this format wasn't acceptable for our implementation (a single CT scan in DICOM format can be comprised of hundreds of various images).
@@ -65,7 +79,7 @@ Another interesting discovery we made is that many CT scans look similar to each
 
 ### Tech Stack
  - Python
- - TensorFlow
+ - TensorFlow (Keras)
 
 ### Sources
 Below is a list of names and links to open source databases of CT scans used in this project.
