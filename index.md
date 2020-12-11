@@ -39,11 +39,13 @@ Incorporating AI into radiology is an area with a huge potential for growth. The
 	 - Creating and building the model produces an untrained neural network (CNN in our case).
 	 - Training the model uses the images and labels to "train" the data.
 ![Build and Train model](https://i.imgur.com/7Q3lWM9.png)
- ![basic neural network architecture](https://i.imgur.com/60TC6W4.png)
-  *Example of a basic neural network architecture*
+![basic neural network architecture](https://i.imgur.com/60TC6W4.png)
+  
+*Example of a basic neural network architecture*
  - Predict Results
 	 - Using the trained model, we estimate the three most likely diagnoses along with their respective probabilities (e.g. COVID-19: 67%, Pneumonia: 14%, Adenocarcinoma: 9%, etc).
-	 ![Predict Results](https://i.imgur.com/bmCkDdO.png)
+	
+![Predict Results](https://i.imgur.com/bmCkDdO.png)
 
 ## Results
 
