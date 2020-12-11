@@ -1,2 +1,2 @@
 # COVID-19 Lung CT Scan Analysis
-The goal of this project is to help increase the speed that CT scan images are analyzed while maintaining the diagnosis accuracy.
+Given a chest CT scan, the goal of this project is to make a prediction if the patient has COVID-19 based on a convolutional neural network.
